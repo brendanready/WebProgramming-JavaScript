@@ -55,7 +55,7 @@ function resetComputerChoice() {
 
 function result(userChoice, computerChoice) {
 	if (userChoice === "rock" && computerChoice === "paper") {
-	    alert(`You lose! \nYou chose ${userChoice} and the computer chose ${computerChoice}.`);
+		alert(`You lose! \nYou chose ${userChoice} and the computer chose ${computerChoice}.`);
 		console.log("You lost!");
 	} else if (userChoice === "rock" && computerChoice === "scissors") {
 		alert(`You win! \nYou chose ${userChoice} and the computer chose ${computerChoice}.`);
