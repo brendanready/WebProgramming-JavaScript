@@ -83,25 +83,25 @@ function result(userChoice, computerChoice) {
 let again = 'y';
 
 do {
+	getUserChoice();
+	console.log(`User choice is ${userChoice}`);
+	getComputerChoice();
+	console.log(`random number Computer chose is ${computerChoice}`);
+	resetComputerChoice();
+	computerChoice = reset;
+	console.log(`Computer choice is ${computerChoice}`);
+	result(userChoice, computerChoice);
+
+	while (userChoice === computerChoice) {
 		getUserChoice();
-		console.log(`User choice is ${userChoice}`);
+		console.log(`After tie User choice is ${userChoice}`);
 		getComputerChoice();
-		console.log(`random number Computer chose is ${computerChoice}`);
+		console.log(`After tie random number Computer chose is ${computerChoice}`);
 		resetComputerChoice();
 		computerChoice = reset;
-		console.log(`Computer choice is ${computerChoice}`);
+		console.log(`After tie Computer choice is ${computerChoice}`);
 		result(userChoice, computerChoice);
-
-		while (userChoice === computerChoice) {
-			getUserChoice();
-			console.log(`After tie User choice is ${userChoice}`);
-			getComputerChoice();
-			console.log(`After tie random number Computer chose is ${computerChoice}`);
-			resetComputerChoice();
-			computerChoice = reset;
-			console.log(`After tie Computer choice is ${computerChoice}`);
-			result(userChoice, computerChoice);
-		}
+	}
 	
 	// Validate again prompt
 	do {
