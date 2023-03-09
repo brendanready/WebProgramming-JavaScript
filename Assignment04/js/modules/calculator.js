@@ -19,7 +19,7 @@ function calculate(a, b, operationSign) {
 
 // ADD FUNCTION
 const add = (x, y, z) => {
-    console.log(`PRIVATE FUNCTION CALCULATE() IS WORKING and the total of calling the function add(${x}, ${y}, "${z}") is ${calculate(x, y, z)}`);
+    console.log(`PRIVATE FUNCTION CALCULATE() IS WORKING and calling calculate(${x}, ${y}, "${z}") returns ${calculate(x, y, z)}`);
     return calculate(x, y, z);
 };
 
