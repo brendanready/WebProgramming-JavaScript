@@ -28,7 +28,7 @@ that the application asks the user for the numbers and operation once more. Youâ
 functionality within a do while loop similarly how the labs were done in the previous lecture.
 */
 
-let number1, number2, total, operation, sign;
+let number1, number2, total, operation;
 
 // IMPORT THE MODULE
 import { add, subtract, multiply, divide } from './modules/calculator.js';
@@ -69,23 +69,23 @@ do {
 function calculator() {
 	switch (operation) {
 		case "add":
-			total = add(number1, number2);
-			sign = "+";
+			operation = "+";
+			total = add(number1, number2, operation);
 			break;
 
 		case "subtract":
-			total = subtract(number1, number2);
-			sign = "-";
+			operation = "-";
+			total = subtract(number1, number2, operation);
 			break;
 
 		case "multiply":
-			total = multiply(number1, number2);
-			sign = "*";
+			operation = "*";
+			total = multiply(number1, number2, operation);
 			break;
 
 		case "divide":
-			total = divide(number1, number2);
-			sign = "/";
+			operation = "/";
+			total = divide(number1, number2, operation);
 			break;
 	}
 }
@@ -94,4 +94,4 @@ function calculator() {
 calculator();
 
 console.log(`Total is ${total}`);
-alert(`${number1} ${sign} ${number2} = ${total}`);
+alert(`${number1} ${operation} ${number2} = ${total}`);
