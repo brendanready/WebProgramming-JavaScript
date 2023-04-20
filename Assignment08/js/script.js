@@ -72,13 +72,13 @@ function buildGrid() {
     // REBUILD THE TBODY FROM SCRATCH
     let tbody = document.createElement('tbody');
     
-    // Return the JSON data
+    // Return the employees JSON data
     fetchEmployees()
         // Use .then() to process the returned JSON object
-        .then(data => {
+        .then(employees => {
             // LOOP THROUGH THE ARRAY OF EMPLOYEES
             // REBUILDING THE ROW STRUCTURE
-            for (let employee of data.employees) {
+            for (let employee of employees) {
                 tbody.innerHTML += 
                 `
                 <tr>
@@ -94,7 +94,7 @@ function buildGrid() {
             // BIND THE TBODY TO THE EMPLOYEE TABLE
             empTable.appendChild(tbody);
             // UPDATE EMPLOYEE COUNT
-            empCount.value = `(${data.employees.length})`;
+            empCount.value = `(${employees.length})`;
     })
     // Use .catch method to catch any errors
     .catch(error => console.log(error.message));

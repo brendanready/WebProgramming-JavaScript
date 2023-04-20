@@ -13,8 +13,9 @@ async function fetchEmployees() {
 		// Use the .fetch() method to fetch the JSON data and return a Promise object
 		const response = await fetch('../../data/employees.json');
 		// Collect the response from response.json()
-		const employees = await response.json();
-		return employees;
+		const data = await response.json();
+		// Load the employees JSON data
+		return data.employees;
 	} catch (error) {
 		console.error(error);
 	}
