@@ -67,14 +67,15 @@ empTable.addEventListener('click', (e) => {
 
 // BUILD THE EMPLOYEES GRID
 function buildGrid() {
+    // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
+    empTable.lastElementChild.remove();
+    // REBUILD THE TBODY FROM SCRATCH
+    let tbody = document.createElement('tbody');
+    
     // Return the JSON data
     fetchEmployees()
         // Use .then() to process the returned JSON object
         .then(data => {
-            // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
-            empTable.lastElementChild.remove();
-            // REBUILD THE TBODY FROM SCRATCH
-            let tbody = document.createElement('tbody');
             // LOOP THROUGH THE ARRAY OF EMPLOYEES
             // REBUILDING THE ROW STRUCTURE
             for (let employee of data.employees) {
