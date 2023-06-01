@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M13 Assignment - The Bank Account Application</title>
+    <script src="js/script.js" defer></script>
+    <style>
+        @-webkit-keyframes fade {
+          0%   { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        @-moz-keyframes fade {
+          0%   { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        @-o-keyframes fade {
+          0%   { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        @keyframes fade {
+          0%   { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        .fade {
+          animation-name: fade;
+          animation-duration: 1.5s; 
+          animation-fill-mode: forwards; 
+          background-color: white;
+        }
+      </style>
+</head>
+<body>
+    <h1>Account Summary</h1>
+
+    <button id="name">Name</button><br><br>
+    <button id="deposit">Deposit</button><br><br>
+    <button id="withdrawal">Withdrawal</button>
+
+    <div id="accountSummary">
+        <p id="accountName"></p>
+        <p id="accountBalance"></p>
+        <p id="accountMsg"></p>
+    </div>
+</body>
+</html>
